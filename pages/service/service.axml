@@ -1,0 +1,20 @@
+<!-- 服务记录 -->
+<view class="service-nav">
+  <navigator url="/pages/take-list/take-list" class="br-b clearfix">
+    <image src="/images/service-take.png" class="se-icon" mode="widthFix" />
+    <text class="se-name">取件记录</text>
+    <view class="se-right">
+      <text class="se-num">{{takeNum}}</text>
+      <image src="/images/arrow.png" class="arrow" mode="widthFix" />
+    </view>
+  </navigator>
+
+  <navigator url="/pages/post-list/post-list" class="br-b clearfix">
+    <image src="/images/service-post.png" class="se-icon" mode="widthFix" />
+    <text class="se-name">寄件记录</text>
+    <view class="se-right">
+      <text class="se-num">{{postNum}}</text>
+      <image src="/images/arrow.png" class="arrow" mode="widthFix" />
+    </view>
+  </navigator>
+</view>

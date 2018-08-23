@@ -1,0 +1,34 @@
+<!-- <view class="head">订单信息</view> -->
+
+<view class="content white">
+    <view class="person">
+        <view class="person-box br-b clearfix">
+            <image class="fl" src="/images/post-icon.png" mode="widthFix" />
+            <view class="box-detail fl">
+                <view class="detail-title">{{post.name}}  {{post.num}}</view>
+                <view class="detail-address">{{post.address}}</view>
+            </view>
+        </view>
+        <view class="person-box br-b clearfix">
+            <image class="fl" src="/images/take-icon.png" mode="widthFix" />
+            <view class="box-detail fl">
+                <view class="detail-title">{{take.name}}  {{take.num}}</view>
+                <view class="detail-address">{{take.address}}</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="box br-b">
+        <view class="item clearfix" a:for="{{message}}">
+            <text class="label">{{item.label}}</text>
+            <text class="detail fr">{{item.detail}}</text>
+        </view>
+    </view>
+
+    <view class="box">
+        <view class="item clearfix" a:for="{{company}}">
+            <text class="label">{{item.label}}</text>
+            <text class="detail fr">{{item.detail}}</text>
+        </view>
+    </view>
+</view>

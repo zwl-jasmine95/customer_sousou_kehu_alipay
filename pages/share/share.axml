@@ -1,0 +1,5 @@
+<view class="share">
+    <image src="/images/share.png" mode="widthFix" />
+    <view class="tip">分享快递驿站，有多重惊喜哦！</view>
+    <button type="default" class="share-btn my-btn-default" onTap="share_event" hover-class="none">马上去分享</button>
+</view>

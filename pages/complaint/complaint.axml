@@ -1,0 +1,18 @@
+<navigator url="/pages/merchant/merchant?is_submit=0" class="select-box white">
+    <text class="select">{{merchant.name}}</text>
+    <image src="/images/arrow.png" class="arrow fr" mode="widthFix" />
+</navigator>
+
+<view class="content white">
+    <textarea onBlur="textarea_event" class="complaint-input" placeholder-class="placeholder" placeholder="请详细描述您的投诉或建议，我们将尽快为您处理。" />
+    <view class="upload-box">
+        <view class="img-box" a:if="{{upload_list.length > 0}}">
+            <image a:for="{{upload_list}}" src="{{item}}" mode="scaleToFill">
+        </view>
+        <image a:if="{{upload_list.length < 3}}" src="/images/upload.png" class="upload" onTap="upload_event" mode="widthFix" />
+    </view>
+</view>
+
+<view class="bottom-btn-box fixed">
+    <button type="default" class="my-btn-default" hover-class="none" onTap="complaint_event">提交投诉</button>
+</view>

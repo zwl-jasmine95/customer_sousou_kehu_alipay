@@ -1,0 +1,69 @@
+<form onSubmit="form_submit">
+    <view class="person-box clearfix white post-box">
+        <image class="fl" src="/images/post-icon.png" mode="widthFix" />
+        <view class="box-detail fl">
+            <view class="detail-title">{{post_name}}</view>
+            <view class="detail-address">{{post_address}}</view>
+        </view>
+        <navigator url="/pages/address/address" class="modify cr-blue br-l fl">修改</navigator>
+    </view>
+
+    <view class="person-box clearfix white">
+        <image class="fl" src="/images/take-icon.png" mode="widthFix" />
+        <view class="box-input fl">
+            <view class="addressee br-b clearfix">
+                <input class="addressee-name fl br-r" name="receive_name" type="text" placeholder="收件人姓名" />
+                <input class="addressee-phone fl" name="receive_tel" type="number" placeholder="电话" />
+            </view>
+
+            <!-- 地区选择 -->
+            <view class="select-address br-b clearfix">
+                <view class="section fl br-r">
+                    <picker name="receive_province" onChange="select_province" value="{{province_value}}" range="{{province_list}}" range-key="name">
+                        <view class="name">{{province_list[province_value].name || '请选择省'}}</view>
+                    </picker>
+                </view>
+                <view class="section fl br-r">
+                    <picker name="receive_city" onChange="select_city" value="{{city_value}}" range="{{city_list}}" range-key="name">
+                        <view class="name">{{city_list[city_value].name || '请选择市'}}</view>
+                    </picker>
+                </view>
+                <view class="section fl">
+                    <picker name="receive_county" onChange="select_county" value="{{county_value}}" range="{{county_list}}" range-key="name">
+                        <view class="name">{{county_list[county_value].name || '请选择区/县'}}</view>
+                    </picker>
+                </view>
+            </view>
+            <!-- end地区选择 -->
+
+            <input class="addressee-address" name="receive_address" type="text" placeholder="详细地址" />
+        </view>
+    </view>
+
+    <view class="section-box white">
+        <picker class="section" name="goods_id" onChange="select_type" value="{{type_value}}" range="{{goods_type}}" range-key="name">
+            <view class="row clearfix br-b">
+                <image class="row-icon fl" src="/images/type.png" mode="widthFix" />
+                <view class="row-extra fl">{{goods_type[type_value].name}}</view>
+                <image class="row-arrow" src="/images/arrow.png" mode="widthFix" />
+            </view>
+        </picker>
+
+        <view class="row clearfix" onTap="select_time">
+            <image class="row-icon fl" src="/images/time.png" mode="widthFix" />
+            <view class="row-extra fl">{{post_time}}</view>
+            <image class="row-arrow" src="/images/arrow.png" mode="widthFix" />
+        </view>
+    </view>
+
+    <view class="remarks-box white clearfix">
+        <image class="row-icon fl" src="/images/remarks.png" mode="widthFix" />
+        <textarea name="user_note" class="remarks-input fl" placeholder="备注" />
+    </view>
+
+    <view class="tip">预约当天15:00之前的可当天寄出，否则隔日</view>
+
+    <view class="bottom-btn-box fixed">
+        <button type="default" formType="submit" class="my-btn-default" hover-class="none">预约寄件</button>
+    </view>
+</form>

@@ -1,0 +1,17 @@
+<!-- 确认购买服务 -->
+<view class="head white">
+    <image src="/images/purchase.png" mode="widthFix" />
+    <view class="tip">{{message}}</view>
+</view>
+
+<view class="content white">
+    <view class="price-box clearfix br-d">
+        <text>1年服务</text>
+        <text class="price">{{price}}元</text>
+    </view>
+
+    <view class="btn-box">
+        <button type="default" class="submit my-btn-default" onTap="confirm_buy" hover-class="none">立即开通</button>
+        <navigator url="/pages/index/index" class="home" open-type="switchTab">先逛逛</navigator>
+    </view>
+</view>

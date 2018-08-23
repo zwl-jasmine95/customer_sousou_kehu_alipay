@@ -1,0 +1,61 @@
+.list-tip{
+    font-size: 28rpx;
+    height: 88rpx;
+    padding: 20rpx 20rpx;
+    box-sizing: border-box;
+    background: #f2f2f2;
+}
+.list-tip image{
+    width: 40rpx;
+    margin-right: 20rpx;
+    vertical-align: -14rpx;
+}
+
+.scroll-box{
+    height: calc(100vh - 246rpx);
+    background: #fff;
+}
+
+/* 主体 */
+.list-box{
+    font-size: 28rpx;
+}
+.list-box .list-item{
+    position: relative;
+    box-sizing: border-box;
+    padding: 0 20rpx;
+}
+.list-item .item-left{
+    float: left;
+    padding: 35rpx 0;
+    width: calc(100% - 120rpx);
+    color: #4e4e4e;
+}
+.list-item .item-right{
+    float: left;
+    width: 120rpx;
+}
+.list-item .item-name{
+    line-height: 40rpx;
+}
+.list-item .item-address{
+    color: #a6a6a6;
+    margin: 25rpx 0;
+}
+.list-item .item-number{
+    font-size: 26rpx;
+}
+.list-item .item-number .total{
+    margin-right: 20rpx;
+}
+.list-item .item-distance{
+    color: #4e4e4e;
+    padding: 50rpx 0;
+    text-align: right;
+}
+.list-item .list-checked{
+    width: 80rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

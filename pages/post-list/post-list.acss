@@ -1,0 +1,73 @@
+/* 头部搜索框 */
+.search-content{
+    height: 120rpx;
+    padding: 25rpx 20rpx;
+    box-sizing: border-box;
+}
+.search-box{
+    background: #f2f2f2;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.search-box .search{
+    width: calc(100% - 111rpx);
+    height: 70rpx;
+    line-height: 70rpx;
+    background: #f2f2f2;
+    font-size: 24rpx;
+    box-sizing: border-box;
+    color: #4a4a4a;
+}
+.search-box  .search-btn{
+    float: right;
+    width: 100rpx;
+    box-sizing: border-box;
+    margin: 12rpx 0;
+    height: 50rpx;
+    text-align: center;
+    border-left: solid 1px #a6a6a6;
+}
+.search-btn  .search-icon{
+    margin: 8rpx 0;
+}
+/* end 头部搜索框 */
+
+.scroll-box{
+    height: calc(100vh - 120rpx);
+}
+
+/* 主体 */
+.list-content{
+    padding: 20rpx;
+}
+.list-card{
+    border-radius: 10rpx;
+    padding: 0 20rpx;
+    margin-bottom: 20rpx;
+}
+.list-card .list-msg{
+    height: 150rpx;
+    box-sizing: border-box;
+    padding: 15rpx 0;
+}
+.list-card .list-msg .item{
+    padding: 15rpx 0;
+}
+.list-card .list-msg .item .title{
+    font-size: 30rpx;
+}
+.list-card .list-msg .item .msg{
+    font-size: 24rpx;
+    color: #a6a6a6;
+    vertical-align: baseline;
+    margin-right: 20rpx;
+}
+
+.list-card .list-btn{
+    padding: 20rpx 0;
+}
+.list-card .list-btn button{
+    width: 180rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}

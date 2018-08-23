@@ -1,0 +1,72 @@
+.scroll-box{
+    height: calc(100vh - 90rpx);
+}
+/* 主体 */
+.list-content{
+    padding: 20rpx;
+}
+.list-content .list-card{
+    height: 160rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    line-height: 38rpx;
+    position: relative;
+}
+.list-card .card-state{
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+.list-card .card-state.road{
+    font-size: 20rpx;
+    color: #fff;
+    background: #077aff;
+    padding: 0 15rpx;
+    border-radius: 10rpx;
+    width: max-content;
+    font-weight: normal;
+}
+.list-card .card-msg{
+    font-size: 24rpx;
+    color: #a6a6a6;
+}
+.list-card .list-checked{
+    width: 80rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.take-box{
+    height: 90rpx;
+    background: #fff;
+}
+.take-box .time{
+    width: 50%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 25rpx 0;
+}
+.take-box .time .time-icon{
+    width: 45rpx;
+    vertical-align: middle;
+    margin-right: 15rpx;
+}
+.take-box .time .time-detail{
+    color: #a6a6a6;
+}
+
+.take-box .take-btn{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    background: #077aff;
+    line-height: 90rpx;
+}

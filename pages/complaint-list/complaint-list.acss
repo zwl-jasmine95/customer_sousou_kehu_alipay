@@ -1,0 +1,32 @@
+.scroll-box{
+    /* height: 100vh; */
+}
+.complaint-card{
+    margin: 20rpx 20rpx 0 20rpx;
+    font-size: 24rpx;
+    color: #a6a6a6;
+    border-radius: 10rpx;
+}
+.complaint-card:last-child{
+    margin: 20rpx;
+}
+.complaint-card .card-title{
+    height: 86rpx;
+    line-height: 86rpx;
+    margin: 0 20rpx;
+}
+.complaint-card .card-title .name{
+    font-size: 28rpx;
+    color: #4e4e4e;
+}
+.complaint-card .card-content .desc{
+    padding: 20rpx;
+}
+.complaint-card .card-content .img{
+    padding: 0 10rpx;
+}
+.complaint-card .card-content .img>image{
+    margin: 10rpx 10rpx 40rpx 10rpx;
+    width: calc(33.3% - 20rpx);
+    height: 150rpx;
+}

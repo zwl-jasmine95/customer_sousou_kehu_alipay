@@ -1,0 +1,26 @@
+page{
+    height: 100vh;
+    background: #fff;
+}
+
+.share{
+    text-align: center;
+    padding-top: 150rpx;
+}
+.share>image{
+    width: 460rpx;
+    display: block;
+    margin: 0 auto;
+}
+.share .tip{
+    display: block;
+    font-size: 28rpx;
+    color: #a6a6a6;
+    padding:120rpx 0;
+}
+.share .share-btn{
+    width: 500rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin: 0 auto;
+}

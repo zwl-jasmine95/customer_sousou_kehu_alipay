@@ -1,0 +1,24 @@
+page{
+    background: #fff;
+}
+.container{
+    text-align: center;
+    padding-top: 150rpx;
+}
+.container image{
+    width: 460rpx;
+    display: block;
+    margin: 0 auto;
+}
+.container .location-tip{
+    display: block;
+    font-size: 28rpx;
+    color: #a6a6a6;
+    padding:120rpx 0;
+}
+.container .location{
+    width: 500rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin: 0 auto;
+}

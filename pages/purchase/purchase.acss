@@ -1,0 +1,53 @@
+page{
+    height: 100vh;
+}
+.head{
+    text-align: center;
+    padding-top: 85rpx;
+    margin-bottom: 20rpx;
+    height: 560rpx;
+    box-sizing: border-box;
+}
+.head image{
+    width: 460rpx;
+    display: block;
+    margin: 0 auto;
+}
+.head .tip{
+    display: block;
+    font-size: 28rpx;
+    color: #a6a6a6;
+    padding-top: 70rpx;
+}
+
+.content{
+    padding-bottom: 50rpx;
+    height: calc(100vh - 580rpx);
+    box-sizing: border-box;
+    position: relative;
+}
+.content .price-box{
+    padding: 30rpx 20rpx;
+    box-sizing: border-box;
+    height: 100rpx;
+}
+.content .price-box .price{
+    float: right;
+}
+
+.content .btn-box{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 80rpx;
+    text-align: center;
+}
+.content .btn-box .submit{
+    width: 500rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin: 10rpx auto;
+}
+.content .btn-box .home{
+    margin-top: 20rpx;
+}

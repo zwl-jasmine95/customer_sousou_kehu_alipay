@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/merchant/merchant",
+    "pages/purchase/purchase",
+    "pages/locaion/locaion",
+    "pages/login/login",
+    "pages/paytips/paytips",
+    "pages/service/service",
+    "pages/user/user",
+    "pages/news/news",
+    "pages/take/take",
+    "pages/post/post",
+    "pages/take-list/take-list",
+    "pages/post-list/post-list",
+    "pages/post-detail/post-detail",
+    "pages/share/share",
+    "pages/coupon/coupon",
+    "pages/agreement/agreement",
+    "pages/complaint/complaint",
+    "pages/complaint-list/complaint-list",
+    "pages/address/address"
+  ],
+  "window": {
+    "defaultTitle": "嗖嗖递"
+  },
+  "tabBar": {
+    "textColor": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#fff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "icon": "/images/nav-icon-home.png",
+        "activeIcon": "/images/nav-icon-home-active.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "icon": "/images/nav-icon-service.png",
+        "activeIcon": "/images/nav-icon-service-active.png",
+        "name": "服务记录"
+      }
+    ]
+  }
+}

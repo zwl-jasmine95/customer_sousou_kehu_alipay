@@ -1,0 +1,59 @@
+.helpful{
+    background: #dcbc8e;
+}
+.useless{
+    background: #a6a6a6;
+}
+
+.coupon-card{
+    height: 220rpx;
+    box-sizing: border-box;
+    border-radius: 10rpx;
+    margin: 20rpx 20rpx 0 20rpx;
+    font-size: 24rpx;
+    overflow: hidden;
+}
+.coupon-card:last-child{
+    margin-bottom: 20rpx;
+}
+
+/* left */
+.card-left{
+    width: 250rpx;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+.card-left .price{
+    font-size: 90rpx;
+}
+
+/* right */
+.card-right{
+    width: calc(100% - 250rpx);
+    box-sizing: border-box;
+    padding: 10rpx 20rpx;
+    height: 100%;
+}
+.card-right .title-box{
+    margin-bottom: 20rpx;
+    padding: 10rpx 0;
+}
+.card-right .title-box .type{
+    padding: 10rpx 15rpx;
+    color: #fff;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+}
+.card-right .title-box .name{
+    line-height: 50rpx;
+}
+.card-right .title-box .time{
+    width: calc(100% - 80rpx);
+}
+.card-right .title-box .status{
+    text-align: right;
+    width: 80rpx;
+}

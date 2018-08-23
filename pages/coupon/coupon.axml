@@ -1,0 +1,24 @@
+<view class="coupon-card clearfix white" a:if="{{data_list.length > 0}}" a:for="{{data_list}}">
+    <view class="card-left fl {{item.status == 0 ? 'helpful' : 'useless'}}">
+        <view class="price-box">
+            <text>￥</text>
+            <text class="price">{{item.price}}</text>
+        </view>
+        <text>{{item.valid_end_time_text}} 过期</text>
+    </view>
+    <view class="card-right fl">
+        <view class="title-box">
+            <text class="type {{item.state ? 'helpful' : 'useless'}}">{{item.coupon_type_text}}</text>
+            <text class="name">{{item.coupon_name}}</text>
+        </view>
+        <view class="title-box clearfix">
+            <text class="time fl">{{item.valid_start_time_text}}至{{item.valid_end_time_text}}</text>
+            <text class="status fr">{{item.status_text}}</text>
+        </view>
+    </view>
+</view>
+
+<view a:if="{{data_list.length == 0}}">
+    <import src="/pages/common/nodata.axml" />
+    <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+</view>

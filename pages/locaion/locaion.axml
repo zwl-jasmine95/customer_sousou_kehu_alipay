@@ -1,0 +1,5 @@
+<view class="container">
+  <image src="/images/get-address.png" mode="widthFix" />
+  <text class="location-tip">请同意使用您的地理位置，我们为您提供优质服务。</text>
+  <button type="default" class="location my-btn-default" onTap="location_event" hover-class="none">获取位置</button>
+</view>

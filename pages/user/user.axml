@@ -1,0 +1,49 @@
+<view class="head-box white">
+    <view class="head-item clearfix">
+        <image onTap="preview_event" class="portrait fl" src="{{avatar}}" mode="widthFix" />
+        <text class="item-name fl">{{name}}</text>
+        <navigator url="/pages/merchant/merchant?is_submit=1" class="item-location fr">
+            <image src="/images/site.png" class="item-icon" mode="widthFix" />
+            <view class="item-site single-text">{{merchant}}</view>
+        </navigator>
+    </view>
+    <view class="head-item clearfix">
+        <image src="/images/integral.png" class="item-icon fl" mode="widthFix" />
+        <text class="item-msg fl">当前拥有积分 {{integral}}</text>
+        <view class="item-service fr" a:if="{{is_service != 0}}">
+            {{deadline}}到期
+            <navigator url="/pages/purchase/purchase" class="cr-blue buy-service">继续购买</navigator>
+        </view>
+        <view class="item-service fr" a:else>
+            服务到期
+            <navigator url="/pages/purchase/purchase" class="cr-blue buy-service">立即购买</navigator>
+        </view>
+    </view>
+</view>
+
+<view class="nav-box white">
+    <navigator a:for="{{lists}}" url="/pages/{{item.url}}/{{item.url}}" class="nav-item br-b clearfix">
+        <image src="/images/{{item.icon}}.png" class="item-icon" mode="widthFix" />
+        <text class="item-name">{{item.name}}</text>
+        <image src="/images/arrow.png" class="item-arrow fr" mode="widthFix" />
+    </navigator>
+
+    <navigator url="/pages/agreement/agreement?agreement_url={{agreement_url}}" class="nav-item br-b clearfix">
+        <image src="/images/agreement.png" class="item-icon" mode="widthFix" />
+        <text class="item-name">服务协议</text>
+        <image src="/images/arrow.png" class="item-arrow fr" mode="widthFix" />
+    </navigator>
+
+    <view class="nav-item br-b clearfix" onTap="clear_storage">
+        <image src="/images/clear-cache.png" class="item-icon" mode="widthFix" />
+        <text class="item-name">清除缓存</text>
+    </view>
+
+    <view class="nav-item" onTap="call_event">
+        <image src="/images/customer-service.png" class="item-icon" mode="widthFix" />
+        <text class="item-name">联系客服 </text>
+        <text class="item-name cr-blue">{{customer_service_tel}}</text>
+    </view>
+</view>
+
+<navigator url="/pages/complaint/complaint" class="complaint">投诉</navigator>

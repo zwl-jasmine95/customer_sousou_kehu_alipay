@@ -1,0 +1,32 @@
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="list-content">
+        <view class="list-card white" a:if="{{data_list.length > 0}}" a:for="{{data_list}}" a:for-index="idx" onTap="check_event" data-idx="{{idx}}">
+            <!-- <view class="card-state {{item.state == 0 ? '' : 'road'}}">
+                {{item.state == 0 ? '可配送' : '配送中'}}
+            </view> -->
+            <view class="card-state">
+                {{item.status_text}}
+            </view>
+            <view class="card-msg">到件时间：{{item.arrive_time}}</view>
+            <view class="card-msg">{{item.express_name}}: {{item.express_number}}</view>
+            <image src="/images/choice.png" mode="widthFix" a:if="{{item.checked}}" class="list-checked" />
+        </view>
+
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+
+</scroll-view>
+
+<view class="take-box clearfix">
+    <view class="time" onTap="select_time">
+        <image src="/images/time.png" mode="widthFix" class="time-icon" />
+        <text class="time-detail">{{take_time}}</text>
+    </view>
+    <view class="take-btn" onTap="take_event">一键配送</view>
+</view>

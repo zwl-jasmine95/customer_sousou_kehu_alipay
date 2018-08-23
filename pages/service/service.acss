@@ -1,0 +1,26 @@
+page{
+    background-color: #fff;
+}
+
+.service-nav navigator{
+    padding: 28rpx 20rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+}
+.service-nav .se-icon{
+    width: 40rpx;
+    vertical-align: -10rpx;
+    margin-right: 20rpx;
+}
+.service-nav .se-right{
+    float: right;
+}
+.service-nav .se-right .se-num{
+    color: #a6a6a6;
+}
+
+.service-nav .se-right .arrow{
+    width: 20rpx;
+    vertical-align: -10rpx;
+    margin-left: 40rpx;
+}

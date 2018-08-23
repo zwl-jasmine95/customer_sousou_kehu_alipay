@@ -1,0 +1,35 @@
+<view class="list-tip cr-blue" onTap="select_address_event">
+    <image src="/images/site.png" mode="widthFix" />
+    <text class="list-checked">{{address}} </text>
+</view>
+
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="list-box">
+        <view a:if="{{data_list.length > 0}}" class="list-item br-b clearfix" a:for="{{data_list}}" onTap="select_item" data-id="{{item.id}}" data-name="{{item.name}}">
+            <view class="item-left">
+                <view class="item-name single-text">{{item.name}}</view>
+                <view class="item-address single-text">{{item.address}}</view>
+                <view class="item-number single-text">
+                    <text class="total">累计配送数量 {{item.total}}件</text>
+                    <text>累计投诉数量 {{item.complaint}}件</text>
+                </view>
+            </view>
+            <view class="item-right">
+                <view class="item-distance">{{item.distance}}</view>
+                <image src="/images/choice.png" a:if="{{item.id === id ? true : false }}" mode="widthFix" class="list-checked" />
+            </view>
+        </view>
+
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+</scroll-view>
+
+<view class="bottom-btn-box">
+    <button type="default" class="my-btn-default {{btn_state == true ? 'btn-disabled' : ''}}" hover-class="none" disabled="{{btnState}}" onTap="choose_merchant">选择站点</button>
+</view>

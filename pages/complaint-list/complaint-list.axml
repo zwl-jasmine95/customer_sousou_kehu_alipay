@@ -1,0 +1,23 @@
+<scroll-view scroll-y="{{true}}" class="scroll-box" onScrollToLower="scroll_lower" lower-threshold="30">
+    <view class="content">
+        <view class="complaint-card white" a:if="{{data_list.length > 0}}" a:for="{{data_list}}">
+            <view class="card-title br-b clearfix">
+                <text class="name">{{item.merchant_name}}</text>
+                <text class="time fr">{{item.add_time}}</text>
+            </view>
+            <view class="card-content">
+                <view class="desc">{{item.content}}</view>
+                <view class="img" a:if="{{item.images.length != 0}}">
+                    <image onTap="preview_event" a:for="{{item.images}}" a:for-item="subItem" a:for-index="subIdx" src="{{subItem}}" data-list="{{item.images}}" data-idx="{{subIdx}}" mode="scaleToFill">
+                </view>
+            </view>
+        </view>
+        <view a:if="{{data_list.length == 0}}">
+            <import src="/pages/common/nodata.axml" />
+            <template is="nodata" data="{{status: data_list_loding_status}}"></template>
+        </view>
+    </view>
+    
+    <import src="/pages/common/bottom_line.axml" />
+    <template is="bottom_line" data="{{status: data_bottom_line_status}}"></template>
+</scroll-view>

@@ -1,0 +1,51 @@
+
+<view class="home-head white clearfix">
+  <navigator url="/pages/user/user" class="user clearfix">
+    <image class="portrait" src="{{img}}" mode="widthFix" />
+    <view class="user-box">
+      <view class="user-name">{{name}}</view>
+      <text class="user-time"  a:if="{{is_service == 0}}">未购买服务</text>
+      <text class="user-time"  a:else>{{service_date}}到期</text>
+    </view>
+  </navigator>
+
+  <navigator class="news" url="/pages/news/news">
+    <image src="/images/news.png" mode="widthFix" />
+    <!-- <text class="news-num" a:if="{{news_count > 0}}">{{news_count}}+</text> -->
+  </navigator>
+</view>
+
+<swiper
+  indicator-dots=true
+  autoplay=true
+  circular=true
+  class="home-banner white"
+  a:if="{{banner_list.length > 0}}"
+>
+  <block a:for="{{banner_list}}">
+    <swiper-item>
+      <image src="{{item.images_url}}" mode="widthFix" data-jump_url="{{item.jump_url}}" onTap="img_nav" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="home-content white">
+  <view class="nav-box br-b">
+    <navigator url="/pages/take/take?is_service={{is_service}}&merchant_id={{merchant_id}}" class="nav-item">
+      <image class="nav-icon" src="/images/take.png" mode="widthFix" />
+      <view class="nav-desc">取件</view>
+      <view class="nav-num">{{take_count}}</view>
+    </navigator>
+    <navigator url="/pages/post/post?merchant_id={{merchant_id}}" class="nav-item">
+      <image class="nav-icon" src="/images/post.png" mode="widthFix" />
+      <view class="nav-desc">寄件</view>
+      <view class="nav-num">{{post_count}}</view>
+    </navigator>
+  </view>
+
+  <view class="home-deadline" a:if="{{is_service == 0}}">
+    购买服务更方便 
+    <navigator url="/pages/purchase/purchase" class="buy-service">购买服务</navigator>
+  </view>
+  <view class="home-deadline"  a:else>会员到期时间：{{service_date}}</view>
+</view>

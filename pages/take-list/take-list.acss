@@ -1,0 +1,59 @@
+/* 头部搜索框 */
+.search-content{
+    height: 120rpx;
+    padding: 25rpx 20rpx;
+    box-sizing: border-box;
+}
+.search-box{
+    background: #f2f2f2;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.search-box .search{
+    width: calc(100% - 111rpx);
+    height: 70rpx;
+    line-height: 70rpx;
+    background: #f2f2f2;
+    font-size: 24rpx;
+    box-sizing: border-box;
+    color: #4a4a4a;
+}
+.search-box  .search-btn{
+    float: right;
+    width: 100rpx;
+    box-sizing: border-box;
+    margin: 12rpx 0;
+    height: 50rpx;
+    text-align: center;
+    border-left: solid 1px #a6a6a6;
+}
+.search-btn  .search-icon{
+    margin: 8rpx 0;
+}
+/* end 头部搜索框 */
+
+.scroll-box{
+    height: calc(100vh - 120rpx);
+}
+/* 主体 */
+.list-content{
+    padding: 20rpx;
+}
+.list-content .list-card{
+    height: 160rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 10rpx;
+    line-height: 38rpx;
+}
+.list-card .card-state{
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+.list-card .card-msg{
+    font-size: 24rpx;
+    color: #a6a6a6;
+}
+
